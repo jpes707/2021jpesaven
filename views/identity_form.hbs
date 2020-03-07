@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="media/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <title>Gefälschter deutscher Identitätsgenerator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="navbar"></div>
+        
+        <form action='getidentity' method ='get'>
+            
+            <h2>Geschlecht</h2>
+                <input type='radio' name='gender' value='f' checked> Frau<br>
+                <input type='radio' name='gender' value='m'> Mann<br>
+                
+            <h2>Kreditkartenanbieter</h2>
+                <input type='radio' name='ccprovider' value='amex' checked> American Express<br>
+                <input type='radio' name='ccprovider' value='mastercard'> Mastercard<br>
+                <input type='radio' name='ccprovider' value='visa'> VISA<br>
+                
+            <h2>Mobilfunkanbieter</h2>
+                <input type='radio' name='cellprovider' value='t' checked> Deutsche Telekom<br>
+                <input type='radio' name='cellprovider' value='v'> Vodafone<br>
+                <input type='radio' name='cellprovider' value='o'> O2 Netz<br>
+                
+            <h2>E-Mail-Domain</h2>
+                <input type='text' name='email' value='yahoo.de'>
+            
+            <h2>Passwortlänge</h2>
+                <select name='passlength'>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='8'>8</option>
+                    <option value='9'>9</option>
+                    <option value='10'>10</option>
+                    <option value='11'>11</option>
+                    <option value='12'>12</option>
+                    <option value='13'>13</option>
+                    <option value='14'>14</option>
+                    <option value='15'>15</option>
+                    <option value='16'>16</option>
+                </select><br><br>
+            
+            <button type='submit'>Holen Sie sich Ihre Identität</button>
+        </form>
+    </body>
+</html>
+
+<script src="javascripts/standard.js" id="identity"></script>

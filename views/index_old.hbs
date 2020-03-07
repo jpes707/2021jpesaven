@@ -1,0 +1,49 @@
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Filthy American weather</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="js/seizure.js"></script>
+    </head>
+
+    <body onload="init()">
+        <ul class="topnav" id="topnav">
+            <li><a class="active" href="./">Wilkommen</a></li>
+            <li><a href="./weather">Weather</a></li>
+            <li><a href="./identity">Deutscher Identitätsgenerator</a></li>
+            <li><a href="./poll">Favorite poll</a></li>
+            <li><a href="./europe">Europe quiz</a></li>
+            <li><a href="./gallery">Image gallery</a></li>
+            <li style="float: right;" id="logout"><a href="./logout">Log out</a></li>
+            <li style="padding: 14px 16px; color:#A17917; float: right;" id="username"></li>
+            
+        </ul>
+        <script>
+            document.getElementById('topnav').style.width = window.innerWidth;
+            
+            $(document).ready(() => {
+            var ajax_params = {
+                'url'     : "https://user.tjhsst.edu/2021jpesaven/username",
+                'type'    : "get",
+                'success' : (responseText) => {
+                    document.getElementById('username').innerHTML = responseText;
+                    if (responseText == 'Guest user') {
+                        document.getElementById('logout').innerHTML = '<a href="./?choice=2">Log in</a>';
+                    }
+                }
+            }
+            
+            $.ajax(ajax_params)
+            });
+        </script>
+        </div>
+        
+        <h1>Welcome (Willkommen)</h1>
+        <canvas id="canvas" width="249" height="203"></canvas>
+        <br>
+        <br>
+        
+        <button onclick="seizure()">Initiate seizure</button>
+    </body>
+
+<script src="js/standard.js"></script>
+

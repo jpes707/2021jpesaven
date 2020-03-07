@@ -1,0 +1,12 @@
+DROP PROCEDURE IF EXISTS getScoreSum; 
+
+DELIMITER $$ 
+
+CREATE PROCEDURE getScoreSum() 
+BEGIN
+
+SELECT SUM(score) FROM house;
+
+END$$ 
+
+DELIMITER ;

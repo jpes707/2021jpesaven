@@ -1,0 +1,23 @@
+    <head>
+        <link rel="shortcut icon" href="media/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <title>Deine gefälschte deutsche Identität</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div id="navbar"></div>
+        
+        <h2>Hier ist deine gefälschte deutsche Identität.</h2>
+        <div class="identity-facts">
+            {{#each fact}}
+                {{this}}
+                <br>
+            {{/each}}
+        </div><br>
+        
+        <button value="Seite neu laden" onClick="window.location.reload();">Generieren Sie eine neue Identität</button><br><br>
+        <button value="Geh zurück" onClick="window.location.replace('identity');">Identitätspräferenzen ändern</button>
+    </body>
+
+<script src="javascripts/standard.js" id="identity"></script>

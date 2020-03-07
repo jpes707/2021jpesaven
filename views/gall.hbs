@@ -1,0 +1,66 @@
+<head>
+    <link rel="shortcut icon" href="media/favicon2.png">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <title>Image gallery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+
+<body id="body">
+    <div id="navbar"></div>
+    
+    <h1 id="title">Image gallery</h1>
+    
+    {{#each images as |image|}}
+        <a href="profile_pictures/{{image}}"><img src="profile_pictures/{{image}}" id="{{image}}" onload="adjust('{{image}}');" width="500"></a>
+    {{/each}}
+</body>
+
+<script>
+    const IMAGES_PER_ROW = 3;
+    
+    let maxImgDimension = window.innerWidth / (IMAGES_PER_ROW * 1.075);
+    let images = '{{images}}'.split(',');
+    
+    let adjust = (img) => {
+    	let newImg = document.getElementById(img);
+        
+    	let w = newImg.naturalWidth;
+    	let h = newImg.naturalHeight;
+    
+    	if (w > h) {
+    		h = h / w * maxImgDimension;
+    		w = maxImgDimension;
+    	} else {
+    		w = w / h * maxImgDimension;
+    		h = maxImgDimension;
+    	}
+    	newImg.width = w;
+    	newImg.height = h;
+    	
+    	topMargin = (maxImgDimension - h)/2;
+        leftMargin = (maxImgDimension - w)/2;
+        
+        newImg.style = 'margin-top:' + topMargin + ';'
+        + 'margin-bottom:' + (maxImgDimension - topMargin - h) + ';'
+        + 'margin-left:' + leftMargin + ';'
+        + 'margin-right:' + (maxImgDimension - leftMargin - w) + ';';
+       if(document.getElementById(1+img)!=null){ 
+        document.getElementById(1+img).id = img.substring(0,img.indexOf("/"));
+       }
+    }
+    
+    
+    let adjustAllImages = () => {
+    	maxImgDimension = window.innerWidth / (IMAGES_PER_ROW * 1.075);
+    
+    	images.forEach((img) => {
+    		adjust(img);
+    	});
+    }
+    
+    $(document).ready(adjustAllImages);
+    
+    window.addEventListener('resize', adjustAllImages);
+</script>
+
+<script src="javascripts/standard.js" id="gallery"></script>

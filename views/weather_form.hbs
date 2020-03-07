@@ -1,0 +1,22 @@
+    <head>
+        <link rel="shortcut icon" href="media/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <title>Get your weather</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+    
+    <body>
+    <div id="navbar"></div>
+        
+        <form action='getweather' method ='get'>
+            <h2>Latitude</h2>
+                <input type='text' name='lat' value='61.577322'><br>
+            
+            <h2>Longitude</h2>
+                <input type='text' name='long' value='-149.479616'><br><br>
+            
+            <button type='submit'>Get your weather</button>
+        </form>
+    </body>
+    
+    <script src="javascripts/standard.js" id="weather"></script>

@@ -1,0 +1,34 @@
+    <head>
+        <link rel="shortcut icon" href="media/favicon2.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <title>Vote</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="navbar"></div>
+        
+        <h1>Favorite Alaskan governor</h1>
+        
+        <h2 id="p-main">
+            <br>
+            <br>
+            <br>
+        </h2>
+        
+        <form onload="fetchFromServer()">
+            <label for="murkowski">
+            <img src="https://3um88b32jzg41py2lr3fg1uh-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/16773657_web1_190509Murkowski1.jpg" alt="Frank Murkowski" height="150" width="224"><br>
+            <input type="radio" name="choice" id="murkowski" value="0">Frank Murkowski<br></label>
+            <label for="palin">
+            <img src="http://www.msnbc.com/sites/msnbc/files/2013/03/aptopix-conservatives-2016-jpeg-0abc0_1.jpg" alt="Sarah Palin" height="168" width="224"><br>
+            <input type="radio" name="choice" id="palin" value="1">{{sarah}}<br></label>
+            <label for="parnell">
+            <img src="https://wickershamsconscience.files.wordpress.com/2014/02/parnell.jpg?w=640" alt="Sean Parnell" height="195" width="150"><br>
+            <input type="radio" name="choice" id="parnell" value="2">Sean Parnell<br></label>
+        </form>
+      
+        <button type="button" onclick="fetchFromServer()">Submit vote</button>
+    </body>
+<script src="javascripts/poll.js" id="{{sarah}}"></script>
+<script src="javascripts/standard.js" id="poll"></script>
