@@ -85,7 +85,7 @@ Click on the country where they speak the language most closely related to Afrik
 Click on a country that borders Andorra: es, fr
 Click on a country within the Schengen Area: at, be, cz, dk, ew, fi, fr, de, gr, hu, is, it, lv, li, lt, lu, mt, nl, no, pl, pt, sk, si, es, se, ch
 Click on an EFTA member state: no, ch, is, li
-Click on a Baltic Assembly member state: es, lv, lt
+Click on a Baltic Assembly member state: ew, lv, lt
 Click on a European Union Customs Union member state: at, be, cz, dk, ew, fi, fr, de, gr, hu, it, lv, lt, lu, mt, nl, pl, pt, sk, si, es, se, tr, bg, ro, gb, hr, ie, cy, ad, sm
 Click on a country within the Schengen Area: at, be, cz, dk, ew, fi, fr, de, gr, hu, is, it, lv, li, lt, lu, mt, nl, no, pl, pt, sk, si, es, se, ch 
 Click on a Nordic Council member state: no, se, fi, dk, is

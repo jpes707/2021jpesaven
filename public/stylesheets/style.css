@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Germania+One|Rosarivo|Source+Serif+Pro:400,700&display=swap');
 
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin-left: 32px;
     margin-top: 80px;
@@ -87,4 +92,8 @@ button:hover {background-color:  #790201;}
 
 #mapsvg {
         float: right;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

@@ -78,14 +78,13 @@ module.exports.set = (app) => {
 						}
                     houses.createUser(user.username, user.counselor);
                     request.get({
-    					url: info.picture,
+    					url: 'https://ion.tjhsst.edu/profile/picture/' + info.id,
     					method: 'GET',
     					encoding: null,
     					headers: {
     						'Authorization': 'Bearer ' + access_token
     					}
     				}, (error, response, body) => {
-    				    console.log(body);
     			        fs.writeFile('public/profile_pictures/' + info.ion_username + '.jpg', body, (err) => {
                             if (err) throw err;
                         });
