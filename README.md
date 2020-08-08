@@ -9,9 +9,9 @@ Website containing all projects from my Web App Development class (fall semester
 3. HTML forms, Handlebars.js, and advanced web requests using APIs: Fake German identity generator ("Deutscher Identitätsgenerator" page)
 4. Middleware and server-side global variables: Favorite Alaskan governor poll ("Favorite poll" page)
 5. SVGs, cookies, and more: Europe map quiz ("Europe quiz" page)
- 1. For a more recent and improved version of the game, check out [jpes707/europe-map-game](https://github.com/jpes707/europe-map-game).
+  1. For a more recent and improved version of the game, check out [jpes707/europe-map-game](https://github.com/jpes707/europe-map-game).
 6. OAuth verification and guest users: globally integrated
 7. User variables and secure web requests: User profiles and images ("Image gallery" and "Profile" pages)
 8. MySQL, database management, and dynamic graphics: IBET score contest ("IBET scores" page)
 9. Final project: Dynamic Europe map quiz game for Amazon Alexa ("Final project" page)
- 1. This project can be found on the Amazon store [here](https://www.amazon.com/mazeboy77-Europe-Quiz/dp/B0845ZYVJV/).
+  1. This project can be found on the Amazon store [here](https://www.amazon.com/mazeboy77-Europe-Quiz/dp/B0845ZYVJV/).
