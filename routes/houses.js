@@ -36,19 +36,14 @@ IDtoIBET = {
 	5: "James Glover Seyler"
 }
 
-var pool = mysql.createPool({
-	connectionLimit: 10,
-	host: 'mysql1.csl.tjhsst.edu',
-	user: 'site_2021jpesave',
-	password: 'NSZe5XWFBUxhAZH8Jrh68Psh',
-	database: 'site_2021jpesaven',
-	port: '3306'
-});
+var pool = mysql.createConnection(process.env.DIRECTOR_DATABASE_URL);
 
 module.exports.createUser = (username, counselor) => {
-	ibetID = IBETtoID[counselorToIBET[counselor]];
-	pool.query('INSERT INTO users VALUES(?, ?, 0)', [username, ibetID]);
-	module.exports.updatePoints(username, counselor, 10, "New user");
+    if (!pool.query('SELECT 1 FROM users WHERE username = ?', [username])) {
+    	ibetID = IBETtoID[counselorToIBET[counselor]];
+    	pool.query('INSERT INTO users VALUES(?, ?, 0)', [username, ibetID]);
+    	module.exports.updatePoints(username, counselor, 10, 'New user');
+    }
 }
 
 module.exports.updatePoints = (username, counselor, amount, reason) => {
@@ -77,7 +72,7 @@ module.exports.set = (app) => {
 	}
 
 	const doTotalQuery = (req, res, next) => {
-		pool.query('CALL getScoreSum;', (error, results, fields) => {
+		pool.query('SELECT SUM(score) FROM users;', (error, results, fields) => {
 			if (error) throw error;
 			curStr = JSON.stringify(results[0]);
 			res.locals.total = parseInt(curStr.substring(15, curStr.length - 2));
